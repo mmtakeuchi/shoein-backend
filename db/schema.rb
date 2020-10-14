@@ -17,12 +17,14 @@ ActiveRecord::Schema.define(version: 2020_10_13_235034) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "shoes", force: :cascade do |t|
     t.string "name"
+    t.string "image"
     t.integer "size"
     t.string "condition"
     t.string "color"
