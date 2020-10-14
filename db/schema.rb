@@ -15,27 +15,7 @@ ActiveRecord::Schema.define(version: 2020_10_13_235034) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "blog_categories", force: :cascade do |t|
-    t.integer "blog_id"
-    t.integer "category_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "blogs", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "brands", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -46,8 +26,6 @@ ActiveRecord::Schema.define(version: 2020_10_13_235034) do
     t.integer "size"
     t.string "condition"
     t.string "color"
-    t.integer "price"
-    t.integer "amount"
     t.integer "brand_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -5,8 +5,6 @@ class CreateShoes < ActiveRecord::Migration[6.0]
       t.integer :size
       t.string :condition
       t.string :color
-      t.integer :price
-      t.integer :amount
       t.integer :brand_id
 
       t.timestamps
